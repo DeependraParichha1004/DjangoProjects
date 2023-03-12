@@ -1,0 +1,171 @@
+
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+     <link rel="stylesheet" href="{% static 'css/css1.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Model Registration</div>
+    <div class="content">
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+              <span>Name</span>
+              {{form.person_name}}<br>
+<!--              <select name={{form.person_name}} id="person_name" style="width: 180px; height: 45px;">&ndash;&gt;-->
+<!--                  <option selected>Name</option>-->
+<!--                  <option value="BenAfflek">BenAfflek</option>-->
+<!--                  <option value="Deependra">Deependra</option>-->
+<!--                  <option value="EltonJohn">EltonJohn</option>-->
+<!--                  <option value="JerrySeinfeld">JerrySeinfeld</option>-->
+<!--                  <option value="Madonna">Madonna</option>-->
+<!--                  <option value="MindyKaling">MindyKaling</option>-->
+<!--            </select>-->
+              <span>Image</span><br>
+              {{form.image}}<br>
+<!--              <div class="uploadOuter">-->
+<!--              <label for="uploadFile" class="btn btn-primary">Upload Image</label>-->
+<!--              <strong>OR</strong>-->
+<!--            <span class="dragBox" >-->
+<!--              {{form.image}}-->
+<!--            <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />-->
+<!--                <input type="image" src={{form.image}} alt="Submit" style="float:right" width="48" height="48">-->
+<!--            </span>-->
+<!--            </div>-->
+<!--            <div id="preview"></div>-->
+
+              <span>Model</span>
+              {{form.model_name}}
+
+
+<!--            <span class="details">Person Name</span>-->
+<!--            <select name="person_name" id="person_name" style="width: 180px; height: 45px;">-->
+<!--                  <option selected>Name</option>-->
+<!--                  <option value="BenAfflek">BenAfflek</option>-->
+<!--                  <option value="Deependra">Deependra</option>-->
+<!--                  <option value="EltonJohn">EltonJohn</option>-->
+<!--                  <option value="JerrySeinfeld">JerrySeinfeld</option>-->
+<!--                  <option value="Madonna">Madonna</option>-->
+<!--                  <option value="MindyKaling">MindyKaling</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--          <div class="input-box" style="width: 180px;">-->
+<!--            <span class="details">Choose File</span>-->
+<!--            <input type="file" name='img' required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">Model Name</span>-->
+<!--            <select name="model_name" id="model_name" style="width: 180px; height: 45px;">-->
+<!--                  <option selected>Model</option>-->
+<!--                  <option value="facenet+keras">facenet+keras</option>-->
+<!--            </select>-->
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+  <script>
+    window.alert("If you have saved your image then only proceed.");
+</script>
+<script>
+    window.alert("You need to select an image from your local folder(val) in this page which you saved from webcam page.");
+</script>
+</html>
+
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--&lt;!&ndash; Created By CodingLab - www.codinglabweb.com &ndash;&gt;-->
+<!--<html lang="en" dir="ltr">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    &lt;!&ndash;-<title> Responsive Registration Form | CodingLab </title>-&ndash;&gt;-->
+<!--     <link rel="stylesheet" href="{% static 'css/css1.css' %}">-->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--   </head>-->
+<!--<body>-->
+<!--  <div class="container">-->
+<!--    <div class="title">Model Registration</div>-->
+<!--    <div class="content">-->
+<!--      <form action="" method="post" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--        <div class="user-details">-->
+<!--          <div class="input-box">-->
+<!--              <span>Name</span>-->
+<!--              {{form.person_name}}<br>-->
+<!--&lt;!&ndash;              <select name={{form.person_name}} id="person_name" style="width: 180px; height: 45px;">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option selected>Name</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="BenAfflek">BenAfflek</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="Deependra">Deependra</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="EltonJohn">EltonJohn</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="JerrySeinfeld">JerrySeinfeld</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="Madonna">Madonna</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="MindyKaling">MindyKaling</option>&ndash;&gt;-->
+<!--&lt;!&ndash;            </select>&ndash;&gt;-->
+<!--              <span>Image</span><br>-->
+<!--              {{form.image}}<br>-->
+<!--&lt;!&ndash;              <div class="uploadOuter">&ndash;&gt;-->
+<!--&lt;!&ndash;              <label for="uploadFile" class="btn btn-primary">Upload Image</label>&ndash;&gt;-->
+<!--&lt;!&ndash;              <strong>OR</strong>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="dragBox" >&ndash;&gt;-->
+<!--&lt;!&ndash;              {{form.image}}&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="image" src={{form.image}} alt="Submit" style="float:right" width="48" height="48">&ndash;&gt;-->
+<!--&lt;!&ndash;            </span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div id="preview"></div>&ndash;&gt;-->
+
+<!--              <span>Model</span>-->
+<!--              {{form.model_name}}-->
+
+
+<!--&lt;!&ndash;            <span class="details">Person Name</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <select name="person_name" id="person_name" style="width: 180px; height: 45px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option selected>Name</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="BenAfflek">BenAfflek</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="Deependra">Deependra</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="EltonJohn">EltonJohn</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="JerrySeinfeld">JerrySeinfeld</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="Madonna">Madonna</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="MindyKaling">MindyKaling</option>&ndash;&gt;-->
+<!--&lt;!&ndash;            </select>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="input-box" style="width: 180px;">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="details">Choose File</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="file" name='img' required>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="input-box">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="details">Model Name</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <select name="model_name" id="model_name" style="width: 180px; height: 45px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option selected>Model</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <option value="facenet+keras">facenet+keras</option>&ndash;&gt;-->
+<!--&lt;!&ndash;            </select>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="button">-->
+<!--          <input type="submit" value="submit">-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</body>-->
+<!--  <script>-->
+<!--    window.alert("If you have saved your image then only proceed.");-->
+<!--</script>-->
+<!--<script>-->
+<!--    window.alert("You need to select an image from your local folder(val) in this page which you saved from webcam page.");-->
+<!--</script>-->
+<!--</html>-->
+

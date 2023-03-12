@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<style>
+    .center {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: center;
+    }
+    .context{
+    text-align:center;
+    }
+</style>
+<body>
+  <div class="center">
+  <div class='center' style="width:500px; height:200px; border:1px solid#000;">
+      <div class="context">
+          <h3> complete details </h3>
+          <b>{% for detail in details %}
+          <p>   {{detail}}   </p>
+          {% endfor %}</b>
+          <a href="record"><button >Record</button></a>
+      </div>
+  </form>
+  </div>
+</body>

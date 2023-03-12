@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Taking photo</title>
+</head>
+<style>
+    body{
+    background-color:LightGray;
+    }
+    #camera{
+     height:350px;
+     width:350px;
+     border:1px solid black;
+    }
+    .container .box {
+        width:640px;
+        margin:50px;
+        display:table;
+    }
+    .container .box .box-row {
+        display:table-row;
+    }
+    .container .box .box-cell {
+        display:table-cell;
+        border:1px solid black;
+        width:25%;
+        padding:10px;
+    }
+</style>
+    <body>
+    <div align="center">
+    <div class="container">
+            <div class="box">
+                <div class="box-row">
+                    <div class="box-cell box1">
+                        <div id="camera"></div>
+                    </div>
+
+                    <div class="box-cell box3">
+                        <div id="results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <div align="center">-->
+<!--        <div id="camera"></div>-->
+<!--    </div>-->
+
+    <div align="center">
+
+        <button onclick="take_snapshot()" >snapshot</button>
+        <button onclick="save()" >save</button>
+        <button onclick="switched_off()">switchedoff</button>
+        <button onclick="switched_on()">switchedon</button>
+        <a href="/"><button class="btn btn-primary">Home</button></a>
+    </div><br>
+    <div align="center">
+<!--        <button href="form">Form</button>-->
+        <a href="form"><button class="btn btn-primary">Form</button></a>
+    </div>
+
+<!--    <div id="results" align="center"></div>&lt;!&ndash;centering snapshot&ndash;&gt;-->
+<!--    <div id="results1" align="center">HI</div>&lt;!&ndash;centering snapshot&ndash;&gt;-->
+
+    </body>
+<script>
+    window.alert("Select snapshot and save the image in the val directory(local)")
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+<script language="JavaScript">
+camera = document.getElementById("camera");
+Webcam.attach(camera);
+Webcam.set({ width:200, height:150, image_format : 'png', png_quality:95 })
+
+<!-- Code to handle taking the snapshot and displaying it locally -->
+function take_snapshot() {
+  Webcam.snap( function(data_uri) {
+       // display results in page
+       document.getElementById('results').innerHTML=
+         '<img src="'+data_uri+'"/>';
+    } );
+}
+
+
+<!--function save(){-->
+<!--  let picture = webcam.snap();-->
+<!--  document.querySelector('#download-photo').href = picture;-->
+<!--}-->
+
+function switched_on() {
+camera = document.getElementById("camera");
+Webcam.attach(camera);
+Webcam.set({ width:200, height:150, image_format : 'png', png_quality:95 })
+}
+
+function switched_off() {
+ Webcam.reset()
+}
+
+
+</script>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<head>-->
+<!--  <title>Taking photo</title>-->
+<!--</head>-->
+<!--<style>-->
+<!--    body{-->
+<!--    background-color:LightGray;-->
+<!--    }-->
+<!--    #camera{-->
+<!--     height:350px;-->
+<!--     width:350px;-->
+<!--     border:1px solid black;-->
+<!--    }-->
+<!--    .container .box {-->
+<!--        width:640px;-->
+<!--        margin:50px;-->
+<!--        display:table;-->
+<!--    }-->
+<!--    .container .box .box-row {-->
+<!--        display:table-row;-->
+<!--    }-->
+<!--    .container .box .box-cell {-->
+<!--        display:table-cell;-->
+<!--        border:1px solid black;-->
+<!--        width:25%;-->
+<!--        padding:10px;-->
+<!--    }-->
+<!--</style>-->
+<!--    <body>-->
+<!--    <div align="center">-->
+<!--    <div class="container">-->
+<!--            <div class="box">-->
+<!--                <div class="box-row">-->
+<!--                    <div class="box-cell box1">-->
+<!--                        <div id="camera"></div>-->
+<!--                    </div>-->
+
+<!--                    <div class="box-cell box3">-->
+<!--                        <div id="results"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <div align="center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div id="camera"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--    <div align="center">-->
+
+<!--        <button onclick="take_snapshot()" >snapshot</button>-->
+<!--        <button onclick="save()" >save</button>-->
+<!--        <button onclick="switched_off()">switchedoff</button>-->
+<!--        <button onclick="switched_on()">switchedon</button>-->
+<!--        <a href="/"><button class="btn btn-primary">Home</button></a>-->
+<!--    </div><br>-->
+<!--    <div align="center">-->
+<!--&lt;!&ndash;        <button href="form">Form</button>&ndash;&gt;-->
+<!--        <a href="form"><button class="btn btn-primary">Form</button></a>-->
+<!--    </div>-->
+
+<!--&lt;!&ndash;    <div id="results" align="center"></div>&lt;!&ndash;centering snapshot&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <div id="results1" align="center">HI</div>&lt;!&ndash;centering snapshot&ndash;&gt;&ndash;&gt;-->
+
+<!--    </body>-->
+<!--<script>-->
+<!--    window.alert("Select snapshot and save the image in the val directory(local)")-->
+<!--</script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>-->
+<!--<script language="JavaScript">-->
+<!--camera = document.getElementById("camera");-->
+<!--Webcam.attach(camera);-->
+<!--Webcam.set({ width:200, height:150, image_format : 'png', png_quality:95 })-->
+
+<!--&lt;!&ndash; Code to handle taking the snapshot and displaying it locally &ndash;&gt;-->
+<!--function take_snapshot() {-->
+<!--  Webcam.snap( function(data_uri) {-->
+<!--       // display results in page-->
+<!--       document.getElementById('results').innerHTML=-->
+<!--         '<img src="'+data_uri+'"/>';-->
+<!--    } );-->
+<!--}-->
+
+
+<!--&lt;!&ndash;function save(){&ndash;&gt;-->
+<!--&lt;!&ndash;  let picture = webcam.snap();&ndash;&gt;-->
+<!--&lt;!&ndash;  document.querySelector('#download-photo').href = picture;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--function switched_on() {-->
+<!--camera = document.getElementById("camera");-->
+<!--Webcam.attach(camera);-->
+<!--Webcam.set({ width:200, height:150, image_format : 'png', png_quality:95 })-->
+<!--}-->
+
+<!--function switched_off() {-->
+<!-- Webcam.reset()-->
+<!--}-->
+
+
+<!--</script>-->
+
+<!--</html>-->

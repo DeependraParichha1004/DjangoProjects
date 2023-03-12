@@ -1,0 +1,115 @@
+
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--&lt;!&ndash; Created By CodingLab - www.codinglabweb.com &ndash;&gt;-->
+<!--<html lang="en" dir="ltr">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    &lt;!&ndash;-<title> Responsive Registration Form | CodingLab </title>-&ndash;&gt;-->
+<!--     <link rel="stylesheet" href="{% static 'css/css1.css' %}">-->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--   </head>-->
+<!--<body>-->
+<!--<div>-->
+<!--  {% for message in messages %}-->
+<!--    {{message}}-->
+<!--  {% endfor %}-->
+<!--</div>-->
+<!--  <div class="container">-->
+<!--    <div class="title">Registration</div>-->
+<!--    <div class="content">-->
+<!--      <form action="registration" method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <div class="user-details">-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">First Name</span>-->
+<!--            <input type="text" name='first_name' placeholder="Enter your name" required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">Last Name</span>-->
+<!--            <input type="text" name='last_name' placeholder="Enter your username" required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">UserName</span>-->
+<!--            <input type="text" name='username' placeholder="Enter your username" required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">Email</span>-->
+<!--            <input type="text" name="email" placeholder="Enter your email" required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">Password</span>-->
+<!--            <input type="text" name='password1' placeholder="Enter your number" required>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="details">Confirm Password</span>-->
+<!--            <input type="text" name="password2" placeholder="Enter your password" required>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="button">-->
+<!--          <input type="submit" value="submit">-->
+<!--        </div>-->
+
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</body>-->
+<!--</html>-->
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+     <link rel="stylesheet" href="{% static 'css/css1.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+<div>
+  {% for message in messages %}
+    {{message}}
+  {% endfor %}
+</div>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="registration" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" name='first_name' placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" name='last_name' placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">UserName</span>
+            <input type="text" name='username' placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" name='password1' placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" name="password2" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin:50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Record</title>
+    <link href="{% static 'css/css3.css' %}">
+</head>
+<body>
+   <table >
+       <div class="center">
+
+           <tr>
+           <th>id</th>
+           <th>person_name</th>
+           <th>model_name</th>
+           <th></th>
+           <th>image</th>
+       </tr>
+       <tr>
+           <td>
+               {% for i in records %}
+               <p>{{i.id}}</p>
+               {% endfor %}
+           </td>
+           <td>
+               {% for i in records %}
+               <p>{{i.person_name}}</p>
+               {% endfor %}
+           </td>
+           <td>
+               {% for i in records %}
+               <p>{{i.model_name}}</p>
+               {% endfor %}
+           </td>
+           <td>
+               {% for i in records %}
+               <p>{{i.probability}}</p>
+               {% endfor %}
+           </td>
+           <td>
+               {% for i in records %}
+               <a href="media/{{i.image}}"><p>media/{{i.image}}</p></a>
+               {% endfor %}
+           </td>
+       </tr>
+       </div>
+
+   </table>
+
+   {% for i in records %}
+   <img src="{{i.image.url}}">
+   {% endfor %}
+</body>
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<style>-->
+<!--table, th, td {-->
+<!--  border: 1px solid black;-->
+<!--  border-collapse: collapse;-->
+<!--}-->
+
+<!--table.center {-->
+<!--  margin:50px;-->
+<!--  margin-left: auto;-->
+<!--  margin-right: auto;-->
+<!--}-->
+
+<!--</style>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Record</title>-->
+<!--    <link href="{% static 'css/css3.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--   <table >-->
+<!--       <div class="center">-->
+
+<!--           <tr>-->
+<!--           <th>id</th>-->
+<!--           <th>person_name</th>-->
+<!--           <th>model_name</th>-->
+<!--           <th></th>-->
+<!--           <th>image</th>-->
+<!--       </tr>-->
+<!--       <tr>-->
+<!--           <td>-->
+<!--               {% for i in records %}-->
+<!--               <p>{{i.id}}</p>-->
+<!--               {% endfor %}-->
+<!--           </td>-->
+<!--           <td>-->
+<!--               {% for i in records %}-->
+<!--               <p>{{i.person_name}}</p>-->
+<!--               {% endfor %}-->
+<!--           </td>-->
+<!--           <td>-->
+<!--               {% for i in records %}-->
+<!--               <p>{{i.model_name}}</p>-->
+<!--               {% endfor %}-->
+<!--           </td>-->
+<!--           <td>-->
+<!--               {% for i in records %}-->
+<!--               <p>{{i.probability}}</p>-->
+<!--               {% endfor %}-->
+<!--           </td>-->
+<!--           <td>-->
+<!--               {% for i in records %}-->
+<!--               <a href="media/{{i.image}}"><p>media/{{i.image}}</p></a>-->
+<!--               {% endfor %}-->
+<!--           </td>-->
+<!--       </tr>-->
+<!--       </div>-->
+
+<!--   </table>-->
+
+<!--   {% for i in records %}-->
+<!--   <img src="{{i.image.url}}">-->
+<!--   {% endfor %}-->
+<!--</body>-->
+<!--</html>-->
